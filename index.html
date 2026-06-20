@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontext AI | The Ultimate Sales Automation Assistant for Facebook & WhatsApp</title>
+    <meta name="description" content="Kontext AI is the ultimate self-hosted sales automation assistant for Bangladeshi F-Commerce. Auto-negotiate discounts, parse shipping details, and verify bKash/Nagad payments 24/7.">
+    <meta name="keywords" content="F-Commerce Bangladesh, AI Chatbot, bKash Auto Verification, Nagad SMS Parser, Banglish NLP, Facebook Messenger automation, WhatsApp Business API">
+    <meta name="author" content="Kontext AI">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zihaaaad.github.io/kontextAI/">
+    <meta property="og:title" content="Kontext AI | The Ultimate Sales Automation Assistant for Facebook & WhatsApp">
+    <meta property="og:description" content="Turn inbox messages into confirmed sales automatically. Built for Bangladeshi F-Commerce with bKash/Nagad auto-verification and local data privacy.">
+    <meta property="og:image" content="https://zihaaaad.github.io/kontextAI/agent_icon.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://zihaaaad.github.io/kontextAI/">
+    <meta property="twitter:title" content="Kontext AI | The Ultimate Sales Automation Assistant for Facebook & WhatsApp">
+    <meta property="twitter:description" content="Turn inbox messages into confirmed sales automatically. Built for Bangladeshi F-Commerce with bKash/Nagad auto-verification and local data privacy.">
+    <meta property="twitter:image" content="https://zihaaaad.github.io/kontextAI/agent_icon.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://zihaaaad.github.io/kontextAI/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <i class="fa-solid fa-leaf"></i> Kontext AI
+            </div>
+            <div class="nav-links">
+                <a href="#benefits">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="about.html">About</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact" class="btn btn-outline">
+                    <i class="fa-solid fa-envelope"></i> Contact Us
+                </a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <a href="#benefits">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="about.html">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="btn btn-outline" style="color: white; border-color: white; margin-top: 1rem;">
+            <i class="fa-solid fa-envelope"></i> Contact Us
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+         <div class="container hero-content">
+             <div class="hero-text reveal">
+                 <div class="badge">
+                     <span class="badge-dot"></span>
+                     Automate Facebook & WhatsApp Sales
+                 </div>
+                 <h1>Turn Messages into <span class="highlight">Orders Automatically</span>, 24/7</h1>
+                 <p>The self-hosted AI sales agent for Bangladeshi F-Commerce. Kontext AI natively understands Romanized Banglish queries, negotiates pricing discounts, parses delivery addresses, and auto-verifies bKash/Nagad MFS payments entirely on autopilot.</p>
+                 <div class="hero-buttons">
+                     <a href="#demo" class="btn btn-primary">See It in Action</a>
+                     <a href="#benefits" class="btn btn-secondary">Why You Need It</a>
+                 </div>
+             </div>
+             <div class="hero-visual reveal reveal-delay">
+                 <!-- Floating AI Profile Parser Mockup -->
+                 <div class="floating-profile-card">
+                     <div class="profile-card-header">
+                         <span class="p-title"><i class="fa-solid fa-circle-user"></i> AI Profile Parser</span>
+                         <span class="p-status"><i class="fa-solid fa-check"></i> Cached</span>
+                     </div>
+                     <div class="profile-card-body">
+                         <div class="profile-field">Name: <strong>Rafiq Hasan</strong></div>
+                         <div class="profile-field">Gender: <span class="gender-tag male">MALE</span></div>
+                         <div class="profile-field">Rule: <span class="rule-code">Use "ভাইয়া" pronoun</span></div>
+                     </div>
+                 </div>
+
+                 <div id="demo" class="glass-card chat-mockup">
+                    <div class="chat-header">
+                        <img src="agent_icon.png" alt="Kontext AI" class="agent-avatar">
+                        <div class="header-text">
+                            <span class="agent-name">Kontext AI</span>
+                            <span class="agent-status">Active Helper</span>
+                        </div>
+                    </div>
+                    <div class="chat-body simulation-container" id="hero-chat-body">
+                        <div class="msg msg-user">bhaiya black color er L size hobe? price koto?</div>
+                        
+                        <div class="typing-indicator msg-bot">
+                            <span></span><span></span><span></span>
+                        </div>
+
+                        <div class="msg msg-bot final-reply">
+                            জি ভাইয়া, ব্ল্যাক কালার L সাইজ স্টকে এভেইলেবল আছে! এটার প্রাইস ১২০০ টাকা। ইনবক্সে আপনার নাম ও ঠিকানা দিলে অর্ডার কনফার্ম করে নিব।
+                        </div>
+                    </div>
+                    <div class="chat-interactive-chips">
+                        <button class="chip-btn" data-query="stock">👕 Ask Stock & Price</button>
+                        <button class="chip-btn" data-query="discount">💸 Ask for Discount</button>
+                        <button class="chip-btn" data-query="verify">🔒 Verify Payment</button>
+                    </div>
+                    <div class="chat-footer">
+                        <span class="latency" id="chat-latency-indicator"><i class="fa-solid fa-bolt"></i> Responded instantly with personalized greeting.</span>
+                    </div>
+                </div>
+             </div>
+         </div>
+     </header>
+
+     <!-- Benefits Section -->
+     <section id="benefits" class="features bg-light">
+         <div class="container">
+             <div class="section-header reveal">
+                 <h2>Boost Your Sales on Autopilot</h2>
+                 <p>Stop manually typing prices, chasing delivery details, or checking screenshots. Let Kontext AI convert page inbox chats into confirmed bank deposits.</p>
+             </div>
+             
+             <div class="grid">
+                 <div class="feature-card reveal">
+                     <div class="icon-box"><i class="fa-solid fa-clock"></i></div>
+                     <h3>Convert Midnight Shoppers 24/7</h3>
+                     <p>Customers get replies instantly, even at 3 AM. Keep response rates at 100% to boost your page's organic trust score and search ranking while you sleep.</p>
+                 </div>
+                 <div class="feature-card reveal reveal-delay-1">
+                     <div class="icon-box"><i class="fa-solid fa-tags"></i></div>
+                     <h3>Smart AI Bargaining Engine</h3>
+                     <p>Automate price negotiations naturally! The bot offers safe, mathematically calculated discounts (like waiving delivery fees) to close deals, never dropping below your secret floor price.</p>
+                 </div>
+                 <div class="feature-card reveal reveal-delay-2">
+                     <div class="icon-box"><i class="fa-solid fa-money-bill-transfer"></i></div>
+                     <h3>Stop Payment Scammers Instantly</h3>
+                     <p>Eliminate fake screenshot fraud. Kontext AI monitors incoming payment confirmation messages on your merchant phone and verifies Transaction IDs (TrxID) in under 2 seconds.</p>
+                 </div>
+                 <div class="feature-card reveal">
+                     <div class="icon-box"><i class="fa-solid fa-address-card"></i></div>
+                     <h3>Eliminate Manual Order Entry</h3>
+                     <p>No more copying customer details. The AI automatically parses messages to extract names, 11-digit phone numbers, and full multi-item order arrays (JSON products) directly into checkout databases.</p>
+                 </div>
+                 <div class="feature-card reveal reveal-delay-1">
+                     <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+                     <h3>One-Tap Telegram Price Controls</h3>
+                     <p>Manage your catalog and product pricing directly from your phone. Send quick text commands via Telegram (like /price or /update_price) to adjust catalog base and offer prices instantly.</p>
+                 </div>
+                 <div class="feature-card reveal reveal-delay-2">
+                     <div class="icon-box"><i class="fa-solid fa-user-check"></i></div>
+                     <h3>Polite, Culturally Natural Greetings</h3>
+                     <p>Speak your customer's language. The bot identifies names and genders instantly to personalize greetings with respectful pronouns ("ভাইয়া" or "আপু"), sounding exactly like a professional human agent.</p>
+                 </div>
+                 <div class="feature-card reveal">
+                     <div class="icon-box"><i class="fa-brands fa-docker"></i></div>
+                     <h3>1-Click Docker Containerization</h3>
+                     <p>Deploy securely in under 5 minutes on any cloud server. Bundle includes PostgreSQL (with pgvector), Redis, worker queues, and app servers inside production-hardened Docker containers.</p>
+                 </div>
+                 <div class="feature-card reveal reveal-delay-1">
+                     <div class="icon-box"><i class="fa-solid fa-user-shield"></i></div>
+                     <h3>Q&A Review Center & JWT Security</h3>
+                     <p>Moderate what the AI learns. Extracted Q&A pairs are held in a secure dashboard moderation queue for approval. Login endpoints are locked with Bcrypt hashing, JWT tokens, and Redis rate limiters.</p>
+                 </div>
+             </div>
+         </div>
+     </section>
+
+    <!-- Performance Stats Section -->
+    <section class="stats-section bg-white" id="performance-stats" style="padding: 100px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="container">
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; text-align: center;">
+                <!-- Card 1 -->
+                <div class="stat-card reveal" style="padding: 3rem 2rem; background: var(--bg-light); border-radius: var(--border-radius); border: 1px solid var(--border-color);">
+                    <div style="font-size: 3.5rem; font-weight: 800; color: var(--forest-primary); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; line-height: 1.1;">99.9%</div>
+                    <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--forest-dark); margin-bottom: 0.8rem; font-family: 'Inter', sans-serif;">Uptime Guaranteed</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Deployed on private virtual servers with self-healing failovers and zero external dependency.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="stat-card reveal reveal-delay-1" style="padding: 3rem 2rem; background: var(--bg-light); border-radius: var(--border-radius); border: 1px solid var(--border-color);">
+                    <div style="font-size: 3.5rem; font-weight: 800; color: var(--mint-accent); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; line-height: 1.1;">40%+</div>
+                    <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--forest-dark); margin-bottom: 0.8rem; font-family: 'Inter', sans-serif;">Conversion Boost</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Instant response speeds prevent cart abandonment, locking in bargaining shoppers 24/7.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="stat-card reveal reveal-delay-2" style="padding: 3rem 2rem; background: var(--bg-light); border-radius: var(--border-radius); border: 1px solid var(--border-color);">
+                    <div style="font-size: 3.5rem; font-weight: 800; color: var(--forest-primary); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; line-height: 1.1;">100%</div>
+                    <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--forest-dark); margin-bottom: 0.8rem; font-family: 'Inter', sans-serif;">Data Sovereignty</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Your customer transaction records, catalog settings, and profit margins remain completely private.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="architecture bg-white">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>How It Works</h2>
+                <p>An elegant, secure workflow designed around tools you already use. Focus on packing orders while AI handles the rest.</p>
+            </div>
+            
+            <!-- Step 1: PostgreSQL Database -->
+            <div class="system-section reveal">
+                <div class="system-grid">
+                    <div class="system-text">
+                        <div class="step-num">Step 1</div>
+                        <h3>Your Secure Product Catalog</h3>
+                        <p>Teach your AI about product sizes, pricing, and stock. It securely stores everything on your server—completely private with zero third-party data sharing.</p>
+                        <ul class="benefit-list">
+                            <li><i class="fa-solid fa-circle-check"></i> <span><strong>Instant Updates:</strong> Update product information instantly via Telegram commands.</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span><strong>pgvector Semantic Search:</strong> Matches Romanized Banglish queries and typos in under 1ms using native vector indexing directly inside PostgreSQL.</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span><strong>100% Data Privacy:</strong> Complete control over your customer logs and product margins with local database ownership.</span></li>
+                        </ul>
+                    </div>
+                    <div class="system-visual">
+                        <div class="sheets-mockup">
+                            <div class="sheets-header">
+                                <span class="sheets-header-title"><i class="fa-solid fa-database"></i> Product Catalog - table: knowledge_base</span>
+                                <span class="sheets-header-status"><i class="fa-solid fa-circle-check"></i> Connected & Active</span>
+                            </div>
+                            <div class="sheets-sql-query">
+                                <span class="comment">-- query semantic vector match using cosine distance</span><br>
+                                <span class="keyword">SELECT</span> user_question, standard_answer, <span class="function">1 - (embedding <=> :query_embedding)</span> <span class="keyword">AS</span> similarity<br>
+                                <span class="keyword">FROM</span> knowledge_base <span class="keyword">ORDER BY</span> similarity <span class="keyword">DESC</span> <span class="keyword">LIMIT</span> 1;<br>
+                                <span class="stats">STATUS: MATCH FOUND (0.8ms) | Match Confidence: 94%</span>
+                            </div>
+                            <div class="sheets-tabs">
+                                <div class="sheets-tab active" data-tab="kb">knowledge_base</div>
+                                <div class="sheets-tab inactive" data-tab="conv">conversations</div>
+                                <div class="sheets-tab inactive" data-tab="orders">pending_orders</div>
+                            </div>
+                            <div class="sheets-grid-container" id="tab-kb">
+                                <table class="sheets-table">
+                                    <thead>
+                                        <tr>
+                                            <th>id</th>
+                                            <th>keywords (কীওয়ার্ড)</th>
+                                            <th>user_question (গ্রাহকের প্রশ্ন)</th>
+                                            <th>standard_answer (আপনার উত্তর)</th>
+                                            <th>embedding (vector)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="sheets-row-num">1</td>
+                                            <td>
+                                                <span class="keyword-tag">দাম</span>
+                                                <span class="keyword-tag">price</span>
+                                                <span class="keyword-tag">koto</span>
+                                            </td>
+                                            <td class="sheet-font-tiro">বইটির দাম কত?</td>
+                                            <td class="sheet-font-tiro">বইটির দাম ১২০ টাকা। অর্ডার করতে ইনবক্সে নাম ও ঠিকানা দিন।</td>
+                                            <td><code class="vec-code">[0.12, -0.41, 0.08, ...]</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sheets-row-num">2</td>
+                                            <td>
+                                                <span class="keyword-tag">অর্ডার</span>
+                                                <span class="keyword-tag">order</span>
+                                            </td>
+                                            <td class="sheet-font-tiro">আমি অর্ডার করতে চাই</td>
+                                            <td class="sheet-font-tiro">অর্ডার করতে আপনার নাম, মোবাইল নাম্বার এবং ডেলিভারি ঠিকানা দিন।</td>
+                                            <td><code class="vec-code">[0.05, -0.32, -0.11, ...]</code></td>
+                                        </tr>
+                                        <tr class="new-row-highlight">
+                                            <td class="sheets-row-num">3</td>
+                                            <td>
+                                                <span class="keyword-tag">স্টক</span>
+                                                <span class="keyword-tag">stock</span>
+                                                <span class="keyword-tag">ase</span>
+                                            </td>
+                                            <td class="sheet-font-tiro">বইটি কি স্টকে আছে?</td>
+                                            <td class="sheet-font-tiro">জি ভাইয়া, বইটি স্টকে এভেইলেবল আছে। ইনবক্সে আপনার ঠিকানা দিন। <span class="badge-new">Learned</span></td>
+                                            <td><code class="vec-code">[0.21, -0.15, 0.44, ...]</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="sheets-grid-container" id="tab-conv" style="display: none;">
+                                <table class="sheets-table">
+                                    <thead>
+                                        <tr>
+                                            <th>id</th>
+                                            <th>platform</th>
+                                            <th>customer</th>
+                                            <th>message (গ্রাহকের বার্তা)</th>
+                                            <th>matched_intent</th>
+                                            <th>confidence</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="sheets-row-num">1</td>
+                                            <td><span class="keyword-tag" style="background: rgba(34, 158, 217, 0.15); color: #229ed9; border: 1px solid rgba(34, 158, 217, 0.3);">WhatsApp</span></td>
+                                            <td>Rafiq Hasan</td>
+                                            <td class="sheet-font-tiro">bhaiya black color er L size hobe? koto?</td>
+                                            <td><code>check_stock</code></td>
+                                            <td>99.2%</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sheets-row-num">2</td>
+                                            <td><span class="keyword-tag" style="background: rgba(0, 132, 255, 0.15); color: #0084ff; border: 1px solid rgba(0, 132, 255, 0.3);">Messenger</span></td>
+                                            <td>Sabrina Ahmed</td>
+                                            <td class="sheet-font-tiro">delivery details ki? chittagong a hobe?</td>
+                                            <td><code>shipping_info</code></td>
+                                            <td>97.8%</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sheets-row-num">3</td>
+                                            <td><span class="keyword-tag" style="background: rgba(34, 158, 217, 0.15); color: #229ed9; border: 1px solid rgba(34, 158, 217, 0.3);">WhatsApp</span></td>
+                                            <td>Imran Khan</td>
+                                            <td class="sheet-font-tiro">bKash payment done. trxid: 9K88F932J1</td>
+                                            <td><code>payment_verify</code></td>
+                                            <td>94.5%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="sheets-grid-container" id="tab-orders" style="display: none;">
+                                <table class="sheets-table">
+                                    <thead>
+                                        <tr>
+                                            <th>id</th>
+                                            <th>customer</th>
+                                            <th>phone</th>
+                                            <th>products_ordered (JSONB)</th>
+                                            <th>address (ঠিকানা)</th>
+                                            <th>trx_id</th>
+                                            <th>amount</th>
+                                            <th>status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="sheets-row-num">1</td>
+                                            <td>Rafiq Hasan</td>
+                                            <td>01712345678</td>
+                                            <td><code style="color: #34d399;">[{"sku": "shirt-01", "qty": 2}]</code></td>
+                                            <td class="sheet-font-tiro">House 12, Road 4, Uttara, Dhaka</td>
+                                            <td><code>9K88F932J1</code></td>
+                                            <td>1,200 Tk</td>
+                                            <td><span class="badge-new">VERIFIED</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sheets-row-num">2</td>
+                                            <td>Sabrina Ahmed</td>
+                                            <td>01898765432</td>
+                                            <td><code style="color: #34d399;">[{"sku": "pant-02", "qty": 1}]</code></td>
+                                            <td class="sheet-font-tiro">42/A Nasirabad, Chittagong</td>
+                                            <td><code>9L00G945K2</code></td>
+                                            <td>1,500 Tk</td>
+                                            <td><span class="badge-new">VERIFIED</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sheets-row-num">3</td>
+                                            <td>Imran Khan</td>
+                                            <td>01911223344</td>
+                                            <td><code style="color: #34d399;">[{"sku": "shoe-03", "qty": 1}]</code></td>
+                                            <td class="sheet-font-tiro">Zindabazar, Sylhet</td>
+                                            <td><code style="color: #f59e0b; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.2);">Pending Pay</code></td>
+                                            <td>850 Tk</td>
+                                            <td><span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; padding: 2px 6px; border-radius: 4px; font-weight: 700; border: 1px solid rgba(245, 158, 11, 0.3); font-size: 0.65rem;">PENDING</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Self-Learning Loop -->
+            <div class="system-section reveal" style="margin-top: 6rem;">
+                <div class="system-grid reverse-grid">
+                    <div class="system-visual">
+                        <div class="telegram-mockup">
+                            <div class="telegram-phone-bar">
+                                <span>13:37</span>
+                                <span><i class="fa-solid fa-signal"></i> <i class="fa-solid fa-wifi"></i> <i class="fa-solid fa-battery-three-quarters"></i></span>
+                            </div>
+                            <div class="telegram-header">
+                                <div class="telegram-avatar">K</div>
+                                <div class="telegram-title">
+                                    <span class="telegram-name">Kontext AI Assistant</span>
+                                    <span class="telegram-status">Active Helper</span>
+                                </div>
+                            </div>
+                            <div class="telegram-body tg-simulation-container">
+                                <div class="tg-webhook-log tg-webhook-log-active">
+                                    <div class="log-header">
+                                        <span><i class="fa-solid fa-shield-halved"></i> Traffic Security Guard</span>
+                                        <span class="log-ok"><i class="fa-solid fa-circle-check"></i> SECURE</span>
+                                    </div>
+                                    <code>Facebook Routing: Verified & Trusted</code>
+                                    <code>Spam Shield: Active & Protected</code>
+                                </div>
+                                <div class="tg-msg tg-msg-in tg-ticket-message">
+                                    <span class="tg-badge">⚠️ WhatsApp Alert</span>
+                                    <strong>User (wa:88017...):</strong> delivery charge koto?<br>
+                                    <small>Reply directly to reply and train the bot.</small>
+                                </div>
+                                <div class="tg-msg tg-msg-out tg-reply-message">
+                                    <div class="tg-reply-preview">User: delivery charge koto?</div>
+                                    ঢাকার ভেতর ৬০ টাকা, ঢাকার বাইরে ১২০ টাকা।
+                                </div>
+                                <div class="tg-system-status tg-status-message">
+                                    <i class="fa-solid fa-brain"></i> Auto-Saved to PostgreSQL!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="system-text">
+                        <div class="step-num">Step 2</div>
+                        <h3>Smart Telegram Alerts & Autotraining</h3>
+                        <p>If a customer asks a question that isn't in your catalog, the bot doesn't make up answers. Instead, it securely alerts your Telegram.</p>
+                        <ul class="benefit-list">
+                            <li><i class="fa-solid fa-bell"></i> <span><strong>Instant Notifications:</strong> See customer inquiries on Facebook or WhatsApp directly in your Telegram chat.</span></li>
+                            <li><i class="fa-solid fa-reply"></i> <span><strong>One-Tap Training:</strong> Reply directly to the Telegram alert. The bot delivers the message to the customer AND automatically saves the Q&A and its vector embedding to the database catalog.</span></li>
+                            <li><i class="fa-solid fa-hourglass-half"></i> <span><strong>Agent Silence Window:</strong> Once you manually reply, the bot pauses for 30 minutes, allowing you to chat with the customer in real-time.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Checkout & MFS Payment Verification -->
+            <div class="system-section reveal" style="margin-top: 6rem;">
+                <div class="system-grid">
+                    <div class="system-text">
+                        <div class="step-num">Step 3</div>
+                        <h3>Instant Checkout & Payment Verification</h3>
+                        <p>No more manually copying addresses or waiting to double-check bank transactions. Kontext AI extracts order details and auto-verifies bKash/Nagad transfers instantly.</p>
+                        <ul class="benefit-list">
+                            <li><i class="fa-solid fa-circle-check"></i> <span><strong>Automated Shipping Details:</strong> Parses customer messages to extract names, 11-digit phone numbers, and addresses (district/thana) into structured lists.</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span><strong>MFS Payment Auto-Verification:</strong> Auto-reconciles transactions by matching customer Transaction IDs (TrxID) against parsed payment logs in under 2 seconds.</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span><strong>Anti-Fraud Protection:</strong> Blocks users attempting to confirm orders using fake or edited payment screenshots.</span></li>
+                        </ul>
+                    </div>
+                    <div class="system-visual">
+                        <div class="checkout-mockup">
+                            <div class="checkout-header">
+                                <span class="checkout-header-title"><i class="fa-solid fa-cart-shopping"></i> Checkout Processor</span>
+                                <span class="checkout-header-badge"><i class="fa-solid fa-sync fa-spin"></i> Active Verification</span>
+                            </div>
+                            <div class="checkout-split">
+                                <!-- Left side: Chat Intake -->
+                                <div class="checkout-panel checkout-chat">
+                                    <div class="panel-label">Raw Customer Chat</div>
+                                    <div class="chat-bubble-intake">
+                                        <span class="user-meta">User (wa:8801732109847):</span>
+                                        "Ami nite chai. Amar naam Rafiq Hasan, phone: 01712345678, thikana: House 12, Road 4, Sector 3, Uttara, Dhaka. bKash e send money korechi, TrxID: 9K88F932J1"
+                                    </div>
+                                    <div class="chat-bubble-reply">
+                                        <span class="bot-meta">Bot Reply:</span>
+                                        "ধন্যবাদ রফিক ভাই! আপনার সেন্ট মানি ১২৬০ টাকা সফলভাবে ভেরিফাই করা হয়েছে। আপনার অর্ডারটি কনফার্ম করে ঢাকা উত্তরা ঠিকানায় পাঠিয়ে দিচ্ছি।"
+                                    </div>
+                                </div>
+                                <!-- Right side: Extracted Data -->
+                                <div class="checkout-panel checkout-data">
+                                    <div class="panel-label">Extracted Order (table: pending_orders)</div>
+                                    <pre class="json-output"><code>{
+  <span class="json-key">"customer_name"</span>: <span class="json-str">"Rafiq Hasan"</span>,
+  <span class="json-key">"phone"</span>: <span class="json-str">"01712345678"</span>,
+  <span class="json-key">"address"</span>: <span class="json-str">"House 12, Road 4, Sector 3, Uttara"</span>,
+  <span class="json-key">"gender_profile"</span>: {
+    <span class="json-key">"resolved_gender"</span>: <span class="json-str">"MALE"</span>,
+    <span class="json-key">"cached"</span>: <span class="json-bool">true</span>
+  },
+  <span class="json-key">"payment_method"</span>: <span class="json-str">"bKash"</span>,
+  <span class="json-key">"trx_id"</span>: <span class="json-str">"9K88F932J1"</span>,
+  <span class="json-key">"verified"</span>: <span class="json-bool">true</span>
+}</code></pre>
+                                    <div class="mfs-badge-container">
+                                        <span class="mfs-pill mfs-bkash"><i class="fa-solid fa-mobile-screen"></i> bKash</span>
+                                        <span class="mfs-pill mfs-nagad"><i class="fa-solid fa-mobile-screen"></i> Nagad</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq bg-light">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Frequently Asked Questions</h2>
+                <p>Simple answers to common questions about Kontext AI.</p>
+            </div>
+            
+            <div class="faq-accordion reveal">
+                <!-- Q1 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span><i class="fa-solid fa-circle-question"></i> How do I teach the bot about my products and prices?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>You can manage your entire product catalog directly from your phone! Simply send a text command to your private Telegram assistant bot (like `/teach price is 500`). The bot updates its memory instantly. It also learns automatically in real time whenever you chat manually with customers in Meta Business Suite, so you never have to repeat yourself.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span><i class="fa-solid fa-circle-question"></i> What happens if a customer asks a question the bot doesn't know?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Kontext AI is designed to protect your business. The bot will never make up prices or policies. If it doesn't know the answer, it instantly sends an alert to your Telegram. The moment you text back your reply, the bot forwards it to the customer and saves that Q&A in its catalog. Next time a customer asks the same thing, the bot handles it automatically.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span><i class="fa-solid fa-circle-question"></i> How does the bargaining feature work?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Bargaining is a norm in Bangladesh. If a customer asks for a discount, the bot uses smart negotiations within predefined boundaries set by you. For example, it can automatically waive the shipping fee to secure the sale, but it will never go below your secret floor price.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span><i class="fa-solid fa-circle-question"></i> How does the bot verify bKash and Nagad payments?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>The bot monitors incoming payment confirmation SMS messages on your merchant phone. When a customer inputs their transaction ID (TrxID) in chat, the bot matches it against these payment logs in under 2 seconds. This completely eliminates fake screenshot fraud. It even translates Bengali numerals (like ১২০০ টাকা) to English digits automatically to prevent parsing failures.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span><i class="fa-solid fa-circle-question"></i> Does it support both Facebook and WhatsApp?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Yes. A single central assistant automates customer conversations across Facebook Messenger and WhatsApp simultaneously. All your leads, orders, and customer alerts are organized in one centralized workspace.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span><i class="fa-solid fa-circle-question"></i> Will the bot interfere if I want to chat with the customer myself?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>No. When you send a manual reply (via Telegram or Meta Business Suite), the bot silences itself for 30 minutes. This allows you to chat with high-value customers naturally without the bot interrupting.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q7 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span><i class="fa-solid fa-circle-question"></i> How does the address extraction feature save time?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Instead of you manually copy-pasting addresses into shipping sheets, the bot automatically extracts the customer's name, phone number, and delivery address directly from their chat messages. It compiles them into a clean order sheet, ready for delivery. Bengali phone numerals (like ০১৭১২...) are converted to standard English formats automatically to keep records clean.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q8 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span><i class="fa-solid fa-circle-question"></i> How does the bot personalize replies with "ভাইয়া" and "আপু"?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>When a customer messages you for the first time, Kontext AI automatically reads their name from Facebook or WhatsApp. The AI immediately determines their gender and saves this greeting preference. From that point on, it automatically speaks to them politely as "ভাইয়া" or "আপু" in a natural, friendly tone—just like a professional human customer service agent would.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q9 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span><i class="fa-solid fa-circle-question"></i> How does the bot understand spelling mistakes and Banglish?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Kontext AI uses a smart AI search engine. Instead of matching exact keywords, the bot understands the meaning of the customer's question. This means if a customer makes spelling typos, uses abbreviation slang, or mixes English and Bangla (Banglish), the bot still finds the correct product price instantly in under a millisecond.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Deployment Section -->
+    <section id="contact" class="contact">
+        <div class="container contact-content reveal">
+            <div class="contact-text">
+                <h2>Ready to Automate Your Sales?</h2>
+                <p>We handle the entire setup for you. We configure the database, set up your Facebook and WhatsApp channels, connect MFS logs, and deliver a fully trained AI sales assistant. Contact us today to get started.</p>
+            </div>
+            <div class="contact-methods">
+                <a href="https://wa.me/8801732109847" target="_blank" class="contact-card">
+                    <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div class="contact-info">
+                        <span class="contact-label">Chat on WhatsApp</span>
+                        <span class="contact-value">+880 1732-109847</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right contact-arrow"></i>
+                </a>
+                <a href="mailto:zihad.connects@gmail.com" class="contact-card">
+                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="contact-info">
+                        <span class="contact-label">Email Us</span>
+                        <span class="contact-value">zihad.connects@gmail.com</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right contact-arrow"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <i class="fa-solid fa-leaf"></i> Kontext AI
+            </div>
+            <div class="copyright">
+                &copy; 2026 Kontext AI. All rights reserved. Proprietary Enterprise Software.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
